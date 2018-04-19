@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="Pickadate.widget.Pickadate" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Pickadate</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="attribute" type="attribute" isPath="optional" pathType="reference" required="true">
+          <caption>Date Attribute</caption>
+          <category>General</category>
+          <description>The Date to connect to the picker</description>
+          <attributeTypes>
+            <attributeType name="DateTime" />
+          </attributeTypes>
+        </property>
+        <property key="dateFormat" type="string" required="true">
+          <caption>Format</caption>
+          <category>General</category>
+          <description></description>
+        </property>
+        <property key="disabledEntity" type="entity" isPath="optional" allowNonPersistableEntities="true" pathType="reference" required="false">
+          <caption>Disabled Entity</caption>
+          <category>Data Source</category>
+          <description></description>
+        </property>
+        <property key="disabledAttr" type="attribute" entityProperty="disabledEntity" isPath="optional" pathType="reference" required="false">
+          <caption>Attribute</caption>
+          <category>Data Source</category>
+          <description>The attribute of the date to disabled</description>
+          <attributeTypes>
+            <attributeType name="DateTime" />
+          </attributeTypes>
+        </property>
+        <property key="disabledMf" type="microflow" required="false">
+          <caption>Microflow</caption>
+          <category>Data Source</category>
+          <description></description>
+          <returnType type="Object" isList="true" entityProperty="disabledEntity" />
+        </property>
+    </properties>
+</widget>
